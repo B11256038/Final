@@ -33,23 +33,46 @@
             font-size: 20px;
         }
         
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #33b5e5;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            padding: 0;
+        }
+        
         .menu ul {
+            display: flex;
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
         
         .menu li {
-            padding: 8px;
-            margin-bottom: 7px;
-            background-color: #33b5e5;
+            padding: 15px;
             color: #ffffff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
             text-align: center;
         }
         
         .menu li:hover {
             background-color: #0099cc;
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 15px;
         }
         
         [class*="col-"] {
@@ -62,7 +85,13 @@
                 width: 25%;
             }
             .col-2 {
+                width: 50%;
+            }
+            .col-3 {
                 width: 75%;
+            }
+            .col-4 {
+                width: 100%;
             }
         }
         
@@ -72,12 +101,14 @@
                 width: 25%;
             }
             .col-2 {
+                width: 50%;
+            }
+            .col-3 {
                 width: 75%;
             }
-        }
-        
-        a {
-            text-decoration: none;
+            .col-4 {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -86,22 +117,23 @@
     <div class="header">
         <h1>花蓮好好逛</h1>
     </div>
+
+    <div class="menu">
+        <ul><br><br>
+            <a href="index.html" target="_self" title="景點推薦">
+                <li>花蓮簡介</li>
+            </a><br>
+            <a href="view.html" target="_self" title="美食推薦">
+                <li>景點推薦</li>
+            </a><br>
+            <a href="food.html" target="_self" title="我的生活圈">
+                <li>美食推薦</li>
+            </a>
+        </ul>
+    </div>
     <div class="row">
-        <div class="col-1 menu">
-            <ul><br><br>
-                <a href="index.html" target="_self" title="景點推薦">
-                    <li>花蓮簡介</li>
-                </a><br>
-                <a href="view.html" target="_self" title="美食推薦">
-                    <li>景點推薦</li>
-                </a><br>
-                <a href="food.html" target="_self" title="我的生活圈">
-                    <li>美食推薦</li>
-                </a>
-            </ul>
-        </div>
-        <div class="col-2">
-            <h2 style="text-align: center;">美食推薦</h2>
+        <div class="col-4">
+            <h2 style="text-align: center;">逛街推薦</h2>
             <section>
                 <ul style="list-style-type: square">
                     <li>東大門夜市</li>

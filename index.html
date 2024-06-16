@@ -33,23 +33,46 @@
             font-size: 20px;
         }
         
+        .menu {
+            display: flex;
+            justify-content: center;
+            background-color: #33b5e5;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            padding: 0;
+        }
+        
         .menu ul {
+            display: flex;
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
         
         .menu li {
-            padding: 8px;
-            margin-bottom: 7px;
-            background-color: #33b5e5;
+            padding: 15px;
             color: #ffffff;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
             text-align: center;
         }
         
         .menu li:hover {
             background-color: #0099cc;
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 15px;
         }
         
         [class*="col-"] {
@@ -62,7 +85,13 @@
                 width: 25%;
             }
             .col-2 {
+                width: 50%;
+            }
+            .col-3 {
                 width: 75%;
+            }
+            .col-4 {
+                width: 100%;
             }
         }
         
@@ -72,12 +101,14 @@
                 width: 25%;
             }
             .col-2 {
+                width: 50%;
+            }
+            .col-3 {
                 width: 75%;
             }
-        }
-        
-        a {
-            text-decoration: none;
+            .col-4 {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -86,23 +117,23 @@
     <div class="header">
         <h1>哈囉花蓮</h1>
     </div>
+    <div class="menu">
+        <ul><br><br>
+            <a href="view.html" target="_self" title="景點推薦">
+                <li>景點推薦</li>
+            </a><br>
+            <a href="food.html" target="_self" title="美食推薦">
+                <li>美食推薦</li>
+            </a><br>
+            <a href="life.html" target="_self" title="逛街推薦">
+                <li>逛街推薦</li>
+            </a>
+        </ul>
+    </div>
     <div class="row">
-        <div class="col-1 menu">
-            <ul><br><br>
-                <a href="view.html" target="_self" title="景點推薦">
-                    <li>景點推薦</li>
-                </a><br>
-                <a href="food.html" target="_self" title="美食推薦">
-                    <li>美食推薦</li>
-                </a><br>
-                <a href="life.html" target="_self" title="我的生活圈">
-                    <li>逛街推薦</li>
-                </a>
-            </ul>
-        </div>
-        <div class="col-2">
-            <h2 style="text-align: center;">花蓮簡介</h2>
-            <section>
+        <div>
+            <section class="col-4">
+                <h2 style="text-align: center;">花蓮簡介</h2>
                 <ul style="list-style-type: square">
                     <li>介紹</li>
                 </ul>
@@ -115,96 +146,101 @@
                 </ul>
             </section>
             <section>
-                <ul style="list-style-type: square">
-                    <li>行政區</li>
-                </ul>
-                <ul style="list-style-type: disc">
-                    <blockquote>
-                        <li>
-                            秀林鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            新城鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            花蓮市
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            吉安鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            壽豐鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            萬榮鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            鳳林鎮
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            豐濱鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            光復鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            瑞穗鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            卓溪鄉
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            玉里鎮
-                        </li>
-                    </blockquote>
-                    <blockquote>
-                        <li>
-                            富里鄉
-                        </li>
-                    </blockquote>
-                </ul>
-                <img src="img/花蓮行政區.gif" align="right">
+                <div class="col-2">
+                    <ul style="list-style-type: square">
+                        <li>行政區</li>
+                    </ul>
+                    <ul style="list-style-type: disc">
+                        <blockquote>
+                            <li>
+                                秀林鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                新城鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                花蓮市
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                吉安鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                壽豐鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                萬榮鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                鳳林鎮
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                豐濱鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                光復鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                瑞穗鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                卓溪鄉
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                玉里鎮
+                            </li>
+                        </blockquote>
+                        <blockquote>
+                            <li>
+                                富里鄉
+                            </li>
+                        </blockquote>
+                    </ul>
+                </div>
+                <div class="col-2"><img src="img/花蓮行政區.gif" align="right" style="max-width: 100%; height: auto;"></div>
             </section>
             <section>
-                <img src="img/花蓮縣徽.png" align="right">
-                <ul style="list-style-type: square">
-                    <li>花蓮縣徽</li>
-                </ul>
-                <ul style="list-style-type: disc">
-                    <blockquote>
-                        <li>
-                            花蓮是太陽的故鄉為設計理念，以太陽在海面昇起的意象，象徵太平洋的曙光。
-                        </li>
-                        <li>
-                            每個光點代表原住民文化色彩：阿美族、太魯閣族、布農族、噶瑪蘭族、撒奇萊雅族、賽德克族與漢族，各大族群融合，快樂、希望、新花蓮。
-                        </li>
-                        <li>
-                            領航鯨是領導者的象徵，打造亞洲最大觀光大縣，讓世界看見花蓮。
-                        </li>
-                    </blockquote>
-                </ul>
+                <div class="col-4">
+                    <img src="img/花蓮縣徽.png" align="right" style="max-width: 100%; height: auto;">
+                    <ul style="list-style-type: square">
+                        <li>花蓮縣徽</li>
+                    </ul>
+                    <ul style="list-style-type: disc">
+                        <blockquote>
+                            <li>
+                                花蓮是太陽的故鄉為設計理念，以太陽在海面昇起的意象，象徵太平洋的曙光。
+                            </li>
+                            <li>
+                                每個光點代表原住民文化色彩：阿美族、太魯閣族、布農族、噶瑪蘭族、撒奇萊雅族、賽德克族與漢族，各大族群融合，快樂、希望、新花蓮。
+                            </li>
+                            <li>
+                                領航鯨是領導者的象徵，打造亞洲最大觀光大縣，讓世界看見花蓮。
+                            </li>
+                        </blockquote>
+                    </ul>
+                </div>
+
             </section>
         </div>
     </div>
